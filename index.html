@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anasayfa - Destek Otomasyon</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:300,400,700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Renk Paleti Tanımları */
+        :root {
+            --primary-color: #007bff;     /* Ana Mavi */
+            --secondary-color: #2c3e50;  /* Koyu Lacivert */
+            --accent-color: #1abc9c;     /* Turkuaz Vurgu */
+            --text-light: #ecf0f1;
+            --text-dark: #34495e;
+            --bg-light: #f9f9f9;
+        }
+
+        /* Genel */
+        body { font-family: 'Roboto', sans-serif; color: var(--text-dark); background-color: white; }
+        h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; color: var(--secondary-color); font-weight: 700; }
+        .section-padding { padding: 90px 0; }
+        .hr-custom { 
+            width: 80px; 
+            border-top: 3px solid var(--accent-color); 
+            margin: 20px auto 40px auto;
+        }
+
+        /* Navbar */
+        .navbar-custom { 
+            background-color: var(--secondary-color); 
+            border-bottom: 5px solid var(--accent-color); /* Turkuaz alt çizgi */
+            border-radius: 0;
+            margin-bottom: 0;
+            transition: all 0.3s;
+        }
+        .navbar-custom .navbar-brand { color: var(--text-light); font-size: 24px; }
+        .navbar-custom .navbar-nav > li > a { 
+            color: var(--text-light); 
+            font-weight: 400; 
+            transition: color 0.3s;
+        }
+        .navbar-custom .navbar-nav > li > a:hover { 
+            color: var(--accent-color); 
+            background-color: transparent;
+        }
+        .navbar-custom .navbar-nav > .active > a, .navbar-custom .navbar-nav > .active > a:focus, .navbar-custom .navbar-nav > .active > a:hover { 
+            background-color: var(--accent-color); 
+            color: var(--secondary-color); 
+        }
+
+        /* Hero Alanı (Daha Endüstriyel Görünüm) */
+        #hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('') no-repeat center center;
+            background-size: cover;
+            height: 90vh; 
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .hero-title { 
+            font-size: 60px; 
+            font-weight: 700; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+        .hero-lead { font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 24px; margin-top: 20px; }
+        
+        /* Butonlar */
+        .btn-custom { 
+            background-color: var(--accent-color); 
+            color: var(--secondary-color); 
+            border: 2px solid var(--accent-color);
+            padding: 10px 30px;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+        .btn-custom:hover { 
+            background-color: transparent; 
+            color: var(--accent-color);
+            border: 2px solid var(--accent-color);
+        }
+
+        /* Özellik Kutuları (Neden Biz?) */
+        .feature-box { 
+            padding: 30px; 
+            text-align: center; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            margin-bottom: 30px; 
+            transition: all 0.4s ease; 
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+        }
+        /* Dinamik Hover Efekti */
+        .feature-box:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--accent-color);
+            transform: translateY(-5px);
+            transition: transform 0.4s ease;
+        }
+        .feature-box:hover:before {
+            transform: translateY(0);
+        }
+        .feature-box:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+        }
+        .feature-box .glyphicon { 
+            font-size: 40px; 
+            color: var(--accent-color); 
+            margin-bottom: 15px; 
+            background: var(--secondary-color);
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        /* Footer */
+        footer { 
+            background-color: var(--secondary-color); 
+            color: var(--text-light); 
+            padding: 40px 0; 
+            border-top: 5px solid var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-custom navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#destek-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">DESTEK OTOMASYON</a>
+            </div>
+            <div class="collapse navbar-collapse" id="destek-navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="index.html">ANASAYFA</a></li>
+                    <li><a href="hizmetler.html">HİZMETLER</a></li>
+                    <li><a href="projeler.html">PROJELER</a></li>
+                    <li><a href="iletisim.html">İLETİŞİM</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 text-center">
+                    <h1 class="hero-title">ENDÜSTRİYEL VERİMLİLİKTE ÇIĞIR AÇIYORUZ</h1>
+                    <p class="hero-lead">Robotik, PLC ve Endüstri 4.0 çözümleriyle tesislerinizi tam otomasyona dönüştürün.</p>
+                    <a href="hizmetler.html" class="btn btn-custom btn-lg" style="margin-top: 40px;">Çözümlerimizi İnceleyin</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="hakkimizda" class="section-padding container-fluid" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>BİZ KİMİZ?</h2>
+                    <hr class="hr-custom">
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+                <div class="col-md-6">
+                    <h3 style="color: var(--accent-color); margin-top: 0;">Mühendislikte Uzmanlık, Otomasyonda Güven</h3>
+                    <p class="lead" style="font-style: italic;">"Destek Otomasyon, sadece sistem kurmaz; işletmenizin geleceğini inşa eder."</p>
+                    <p>On yılı aşkın sektör deneyimiyle, uluslararası kalite standartlarında, anahtar teslimi otomasyon projeleri geliştiriyoruz. Odak noktamız, sıfır hata toleransıyla çalışan, enerji verimliliği yüksek ve tam entegre sistemlerdir. PLC/SCADA programlamadan özel makine otomasyonuna kadar her aşamada yanınızdayız.</p>
+                    <a href="iletisim.html" class="btn btn-default" style="margin-top: 20px; border-color: var(--secondary-color);">Hemen Projenizi Konuşalım <span class="glyphicon glyphicon-arrow-right"></span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="neden-biz" class="section-padding container">
+        <div class="row text-center">
+            <h2>AVANTAJLARIMIZ</h2>
+            <hr class="hr-custom">
+            <div class="col-sm-4">
+                <div class="feature-box">
+                    <span class="glyphicon glyphicon-certificate"></span>
+                    <h3>Sertifikalı Kalite</h3>
+                    <p>Uluslararası standartlara uygun, garantili donanım ve yazılım çözümleri sunuyoruz.</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="feature-box">
+                    <span class="glyphicon glyphicon-wrench"></span>
+                    <h3>Yerinde Destek</h3>
+                    <p>Hızlı müdahale ve proaktif bakım hizmetleriyle kesintisiz operasyon sağlıyoruz.</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="feature-box">
+                    <span class="glyphicon glyphicon-stats"></span>
+                    <h3>Ölçülebilir Verimlilik</h3>
+                    <p>KPI'lar (Temel Performans Göstergeleri) ile yatırımınızın geri dönüşünü somutlaştırıyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container-fluid text-center" style="background-color: var(--accent-color); padding: 40px 0;">
+        <h2 style="color: white; margin-top: 0; margin-bottom: 20px; font-size: 30px;">PROJENİZ İÇİN HAZIR MIYIZ?</h2>
+        <a href="iletisim.html" class="btn btn-custom btn-lg" style="background-color: var(--secondary-color); color: white; border-color: var(--secondary-color);">Ücretsiz Teklif Alın</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 style="color: var(--accent-color);">Destek Otomasyon</h4>
+                    <p>Endüstriyel sistemlerinizi akıllı, güvenli ve verimli hale getiriyoruz.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color: var(--accent-color);">Hızlı Bağlantılar</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="hizmetler.html" style="color: var(--text-light);">Hizmetlerimiz</a></li>
+                        <li><a href="projeler.html" style="color: var(--text-light);">Referanslar</a></li>
+                        <li><a href="#" style="color: var(--text-light);">KVKK</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color: var(--accent-color);">İletişim</h4>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> Adresiniz</p>
+                    <p><span class="glyphicon glyphicon-earphone"></span> +90 555 55 55</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> info@destekotomasyon.com</p>
+                </div>
+            </div>
+            <div class="row text-center" style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px; margin-top: 20px;">
+                <p>&copy; 2025 Destek Otomasyon. Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Sadece tek sayfada link tıklamalarını yumuşatmak için kullanılır, çok sayfalı yapıda gerekli değildir.
+    </script>
+</body>
+</html>
