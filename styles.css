@@ -1,0 +1,153 @@
+/* Renk Paleti Tanımları */
+:root {
+    --primary-color: #007bff;     /* Ana Mavi */
+    --secondary-color: #2c3e50;  /* Koyu Lacivert */
+    --accent-color: #1abc9c;     /* Turkuaz Vurgu */
+    --text-light: #ecf0f1;
+    --text-dark: #34495e;
+    --bg-light: #f9f9f9;
+}
+
+/* Genel */
+body { font-family: 'Roboto', sans-serif; color: var(--text-dark); background-color: white; }
+h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; color: var(--secondary-color); font-weight: 700; }
+.section-padding { padding: 90px 0; }
+.hr-custom { 
+    width: 80px; 
+    border-top: 3px solid var(--accent-color); 
+    margin: 20px auto 40px auto;
+}
+
+/* Navbar */
+.navbar-custom { 
+    background-color: var(--secondary-color); 
+    border-bottom: 5px solid var(--accent-color); 
+    border-radius: 0;
+    margin-bottom: 0;
+    transition: all 0.3s;
+}
+.navbar-custom .navbar-brand { color: var(--text-light); font-size: 24px; }
+.navbar-custom .navbar-nav > li > a { 
+    color: var(--text-light); 
+    font-weight: 400; 
+    transition: color 0.3s;
+}
+.navbar-custom .navbar-nav > li > a:hover { 
+    color: var(--accent-color); 
+    background-color: transparent;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-custom .navbar-nav > .active > a:focus, .navbar-custom .navbar-nav > .active > a:hover { 
+    background-color: var(--accent-color); 
+    color: var(--secondary-color); 
+}
+
+/* Başlık Bannerları (Hero yerine sayfa başlıkları) */
+.page-header-banner {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+.page-header-banner h1 {
+    color: white;
+    font-size: 48px;
+}
+
+/* Butonlar */
+.btn-custom { 
+    background-color: var(--accent-color); 
+    color: var(--secondary-color); 
+    border: 2px solid var(--accent-color);
+    padding: 10px 30px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+.btn-custom:hover { 
+    background-color: transparent; 
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+}
+
+/* Hizmet Detay Kutuları */
+.service-detail-box { 
+    border: 1px solid #eee; 
+    padding: 30px; 
+    margin-bottom: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    min-height: 480px;
+    transition: all 0.3s;
+}
+.service-detail-box:hover {
+     border-left: 5px solid var(--accent-color);
+     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+.service-detail-box h3 { color: var(--accent-color); }
+.service-detail-box .glyphicon { font-size: 30px; margin-right: 10px; color: var(--secondary-color); }
+
+/* Proje Kartları (Thumbnail) */
+.thumbnail { 
+    border: none; 
+    padding: 0; 
+    margin-bottom: 30px; 
+    transition: all 0.4s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.thumbnail:hover {
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+    transform: translateY(-5px);
+}
+.caption { padding: 15px; text-align: left; }
+.caption h3 { margin-top: 5px; color: var(--secondary-color); }
+
+/* İletişim Formu */
+.contact-info-box { 
+    background-color: var(--bg-light); 
+    padding: 30px; 
+    border-radius: 8px; 
+    margin-bottom: 20px;
+    border-left: 4px solid var(--accent-color);
+}
+.contact-info-box .glyphicon { font-size: 20px; color: var(--accent-color); margin-right: 10px; }
+.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(26, 188, 156, 0.25); /* Turkuaz odak efekti */
+}
+
+/* Footer (Bu kısım Anasayfadan farklı olarak burada tanımlanmış olabilir, emin olmak için tekrar ekledik) */
+footer { 
+    background-color: var(--secondary-color); 
+    color: var(--text-light); 
+    padding: 40px 0; 
+    border-top: 5px solid var(--accent-color);
+}
+
+/* Sadece index.html'e özgü olan Hero Alanı */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('') no-repeat center center;
+    background-size: cover;
+    height: 90vh; 
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.hero-title { 
+    font-size: 60px; 
+    font-weight: 700; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+.hero-lead { font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 24px; margin-top: 20px; }
+.feature-box .glyphicon { 
+    font-size: 40px; 
+    color: var(--accent-color); 
+    margin-bottom: 15px; 
+    background: var(--secondary-color);
+    padding: 10px;
+    border-radius: 50%;
+}
