@@ -34,6 +34,13 @@ h1, h2, h3, h4 {
 }
 
 /* Bootstrap .navbar sınıfı bu stillerin çoğunu zaten sağlar. Özel ayarlar burada kalabilir. */
+.lang-switcher a {
+    transition: color 0.2s ease-in-out;
+}
+.lang-switcher a.active-lang {
+    color: var(--secondary-color) !important;
+    text-decoration: underline !important;
+}
 
 /* Hero (Ana Karşılama) Alanı */
 .hero {

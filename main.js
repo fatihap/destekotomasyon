@@ -23,6 +23,13 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
         document.documentElement.lang = lang; // html etiketinin lang özelliğini güncelle
+
+        // Aktif dil linkini işaretle
+        document.querySelectorAll('.lang-switcher a').forEach(a => {
+            a.classList.remove('active-lang');
+        });
+        const activeLangLink = document.querySelector(`.lang-switcher a[onclick="setLanguage('${lang}')"]`);
+        if(activeLangLink) activeLangLink.classList.add('active-lang');
     };
 
     // Navbar ve Footer'ı yükle, sonra çeviriyi yap
@@ -42,5 +49,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Dil değiştirme butonlarına event listener ekle
         window.setLanguage = setLanguage; // Fonksiyonu global scope'a taşı
+
+        // Sayaç Animasyonu (Sadece anasayfada çalışacak)
+        if (document.querySelector('.stats-section')) {
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200; // Animasyon hızı
+
+            const animateCounter = (counter) => {
+                const target = +counter.innerText.replace('+', '');
+                counter.innerText = '0';
+
+                const updateCount = () => {
+                    const count = +counter.innerText;
+                    const increment = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = `${Math.ceil(count + increment)}`;
+                        setTimeout(updateCount, 10);
+                    } else {
+                        counter.innerText = `${target}+`;
+                    }
+                };
+                updateCount();
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) counters.forEach(animateCounter);
+            }, { threshold: 0.5 });
+            observer.observe(document.querySelector('.stats-section'));
+        }
     });
 });
