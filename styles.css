@@ -1,153 +1,213 @@
-/* Renk Paleti Tanımları */
+/* Genel Stil ve Sıfırlama */
 :root {
-    --primary-color: #007bff;     /* Ana Mavi */
-    --secondary-color: #2c3e50;  /* Koyu Lacivert */
-    --accent-color: #1abc9c;     /* Turkuaz Vurgu */
-    --text-light: #ecf0f1;
-    --text-dark: #34495e;
-    --bg-light: #f9f9f9;
+    --primary-color: #0d6efd; /* Bootstrap Primary Blue */
+    --secondary-color: #007bff; /* Canlı mavi */
+    --dark-color: #212529; /* Koyu gri */
+    --light-color: #f8f9fa; /* Çok açık gri */
+    --white-color: #ffffff;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
 }
 
-/* Genel */
-body { font-family: 'Roboto', sans-serif; color: var(--text-dark); background-color: white; }
-h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; color: var(--secondary-color); font-weight: 700; }
-.section-padding { padding: 90px 0; }
-.hr-custom { 
-    width: 80px; 
-    border-top: 3px solid var(--accent-color); 
-    margin: 20px auto 40px auto;
+/* Bootstrap zaten bir sıfırlama (reboot) içerdiği için genel sıfırlama kaldırılabilir. */
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    padding-top: 70px; /* Sabit navbar için boşluk */
 }
 
-/* Navbar */
-.navbar-custom { 
-    background-color: var(--secondary-color); 
-    border-bottom: 5px solid var(--accent-color); 
-    border-radius: 0;
-    margin-bottom: 0;
-    transition: all 0.3s;
-}
-.navbar-custom .navbar-brand { color: var(--text-light); font-size: 24px; }
-.navbar-custom .navbar-nav > li > a { 
-    color: var(--text-light); 
-    font-weight: 400; 
-    transition: color 0.3s;
-}
-.navbar-custom .navbar-nav > li > a:hover { 
-    color: var(--accent-color); 
-    background-color: transparent;
-}
-.navbar-custom .navbar-nav > .active > a, .navbar-custom .navbar-nav > .active > a:focus, .navbar-custom .navbar-nav > .active > a:hover { 
-    background-color: var(--accent-color); 
-    color: var(--secondary-color); 
+a {
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
-/* Başlık Bannerları (Hero yerine sayfa başlıkları) */
-.page-header-banner {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 80px 0;
+img {
+    width: 100%;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+/* Bootstrap .navbar sınıfı bu stillerin çoğunu zaten sağlar. Özel ayarlar burada kalabilir. */
+
+/* Hero (Ana Karşılama) Alanı */
+.hero {
+    background: linear-gradient(rgba(0, 86, 179, 0.7), rgba(0, 86, 179, 0.7)), url('https://images.pexels.com/photos/4386339/pexels-photo-4386339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+    color: var(--white-color);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
-.page-header-banner h1 {
-    color: white;
-    font-size: 48px;
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--white-color);
 }
 
-/* Butonlar */
-.btn-custom { 
-    background-color: var(--accent-color); 
-    color: var(--secondary-color); 
-    border: 2px solid var(--accent-color);
-    padding: 10px 30px;
-    font-weight: 700;
-    transition: all 0.3s;
-}
-.btn-custom:hover { 
-    background-color: transparent; 
-    color: var(--accent-color);
-    border: 2px solid var(--accent-color);
+.hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
 }
 
-/* Hizmet Detay Kutuları */
-.service-detail-box { 
-    border: 1px solid #eee; 
-    padding: 30px; 
-    margin-bottom: 30px; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    min-height: 480px;
-    transition: all 0.3s;
+/* Genel Bölümler */
+.section {
+    padding: 4rem 0;
 }
-.service-detail-box:hover {
-     border-left: 5px solid var(--accent-color);
-     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-}
-.service-detail-box h3 { color: var(--accent-color); }
-.service-detail-box .glyphicon { font-size: 30px; margin-right: 10px; color: var(--secondary-color); }
 
-/* Proje Kartları (Thumbnail) */
-.thumbnail { 
-    border: none; 
-    padding: 0; 
-    margin-bottom: 30px; 
-    transition: all 0.4s;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-radius: 8px;
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Hizmet Kartları - Bootstrap ile uyumlu */
+.service-card {
+    background: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
     overflow: hidden;
-}
-.thumbnail:hover {
-    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
-    transform: translateY(-5px);
-}
-.caption { padding: 15px; text-align: left; }
-.caption h3 { margin-top: 5px; color: var(--secondary-color); }
-
-/* İletişim Formu */
-.contact-info-box { 
-    background-color: var(--bg-light); 
-    padding: 30px; 
-    border-radius: 8px; 
-    margin-bottom: 20px;
-    border-left: 4px solid var(--accent-color);
-}
-.contact-info-box .glyphicon { font-size: 20px; color: var(--accent-color); margin-right: 10px; }
-.form-control:focus {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 0.2rem rgba(26, 188, 156, 0.25); /* Turkuaz odak efekti */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Kartların aynı hizada durması için */
 }
 
-/* Footer (Bu kısım Anasayfadan farklı olarak burada tanımlanmış olabilir, emin olmak için tekrar ekledik) */
-footer { 
-    background-color: var(--secondary-color); 
-    color: var(--text-light); 
-    padding: 40px 0; 
-    border-top: 5px solid var(--accent-color);
+/* Projeler Bölümü - Bootstrap ile uyumlu */
+.project-card {
+    overflow: hidden;
+    position: relative;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Sadece index.html'e özgü olan Hero Alanı */
-#hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('') no-repeat center center;
-    background-size: cover;
-    height: 90vh; 
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.project-card .project-img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.service-card .service-img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.1);
+}
+
+.project-card .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 86, 179, 0.8);
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    text-align: center;
+    padding: 1rem;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.service-card-content {
+    padding: 1.5rem;
+}
+
+
+/* İletişim Sayfası */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.contact-form, .contact-info {
+    background: var(--white-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+}
+
+.contact-info h3 {
+    margin-top: 0;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
-    color: white;
-    text-align: center;
 }
-.hero-title { 
-    font-size: 60px; 
-    font-weight: 700; 
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 10px;
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    width: 20px;
 }
-.hero-lead { font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 24px; margin-top: 20px; }
-.feature-box .glyphicon { 
-    font-size: 40px; 
-    color: var(--accent-color); 
-    margin-bottom: 15px; 
-    background: var(--secondary-color);
-    padding: 10px;
-    border-radius: 50%;
+
+
+/* Footer */
+.footer {
+    margin-top: 0; /* Main ile footer arası boşluğu kaldır */
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
 }
