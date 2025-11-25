@@ -69,14 +69,22 @@ h1, h2, h3, h4 {
     margin-bottom: 3rem;
 }
 
-/* Hizmet Kartları - Bootstrap ile uyumlu */
-.service-card {
-    background: var(--white-color);
+/* Hizmetler Sayfası Kartları */
+.service-box {
+    background-color: var(--white-color);
+    padding: 30px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%; /* Kartların aynı hizada durması için */
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+}
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.service-box .service-icon {
+    font-size: 3rem; /* 48px */
+    color: var(--primary-color);
 }
 
 /* Projeler Bölümü - Bootstrap ile uyumlu */
@@ -97,11 +105,6 @@ h1, h2, h3, h4 {
     height: 250px;
     object-fit: cover;
     transition: transform 0.4s ease;
-}
-
-.service-card .service-img {
-    height: 250px;
-    object-fit: cover;
 }
 
 .project-card:hover .project-img {
@@ -129,11 +132,6 @@ h1, h2, h3, h4 {
 .project-card:hover .project-overlay {
     opacity: 1;
 }
-
-.service-card-content {
-    padding: 1.5rem;
-}
-
 
 /* İletişim Sayfası */
 .contact-grid {
@@ -203,6 +201,30 @@ h1, h2, h3, h4 {
 /* Footer */
 .footer {
     margin-top: 0; /* Main ile footer arası boşluğu kaldır */
+}
+
+/* Rakamlarla Biz Bölümü */
+.stats-section {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.stats-section .stat-item i {
+    font-size: 3rem;
+}
+
+.stats-section .stat-item .counter {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Harekete Geç (CTA) Bölümü */
+.cta-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+    color: var(--white-color);
+}
+.cta-section h2 {
+    color: var(--white-color);
 }
 
 /* Responsive Tasarım */

@@ -8,16 +8,21 @@
         </button>
         <div class="collapse navbar-collapse" id="main-nav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
-                <li class="nav-item"><a class="nav-link" href="hizmetler.html">Hizmetler</a></li>
-                <li class="nav-item"><a class="nav-link" href="projeler.html">Projeler</a></li>
-                <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html" data-lang-key="navHome"></a></li>
+                <li class="nav-item"><a class="nav-link" href="hizmetler.html" data-lang-key="navServices"></a></li>
+                <li class="nav-item"><a class="nav-link" href="projeler.html" data-lang-key="navProjects"></a></li>
+                <li class="nav-item"><a class="nav-link" href="iletisim.html" data-lang-key="navContact"></a></li>
             </ul>
-            <span class="navbar-text ms-lg-3 mt-2 mt-lg-0">
-                <a href="tel:+902125555555" class="text-white text-decoration-none">
-                    <i class="bi bi-telephone-fill me-1"></i> +90 (212) 555 55 55
+            <span class="navbar-text ms-lg-4 mt-2 mt-lg-0">
+                <a href="tel:+905399571333" class="text-white text-decoration-none">
+                    <i class="bi bi-telephone-fill me-1"></i> <span data-lang-key="phone"></span>
                 </a>
             </span>
+            <div class="navbar-text ms-lg-3 mt-2 mt-lg-0">
+                <a href="#" onclick="setLanguage('tr')" class="text-white text-decoration-none fw-bold">TR</a>
+                <span class="text-white-50 mx-1">/</span>
+                <a href="#" onclick="setLanguage('en')" class="text-white text-decoration-none fw-bold">EN</a>
+            </div>
         </div>
     </div>
 </nav>
