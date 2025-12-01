@@ -16,12 +16,22 @@ document.addEventListener("DOMContentLoaded", function() {
         const lang = localStorage.getItem('language') || 'tr'; // Varsayılan dil Türkçe
         const translation = translations[lang];
 
+        // İçerik çevirisi
         document.querySelectorAll('[data-lang-key]').forEach(element => {
             const key = element.getAttribute('data-lang-key');
             if (translation[key]) {
                 element.innerHTML = translation[key];
             }
         });
+
+        // Placeholder çevirisi
+        document.querySelectorAll('[data-lang-placeholder]').forEach(element => {
+            const key = element.getAttribute('data-lang-placeholder');
+            if (translation[key]) {
+                element.setAttribute('placeholder', translation[key]);
+            }
+        });
+
         document.documentElement.lang = lang; // html etiketinin lang özelliğini güncelle
 
         // Aktif dil linkini işaretle
