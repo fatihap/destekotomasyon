@@ -10,80 +10,84 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Kendi Özel Stilleriniz -->
     <link rel="stylesheet" href="styles.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
 
     <main>
+        <!-- Page Header -->
+        <section class="bg-dark py-5 text-white position-relative overflow-hidden">
+            <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25" style="background: url('https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg') center/cover;"></div>
+            <div class="container position-relative z-1 text-center py-5">
+                <h1 class="display-4 fw-bold" data-lang-key="servicesPageTitle">Hizmetlerimiz</h1>
+                <p class="lead mb-0 opacity-75" data-lang-key="servicesPageSubtitle">Sizin için sunduğumuz profesyonel çözümler</p>
+            </div>
+        </section>
+
         <section class="section bg-light">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="section-title" data-lang-key="servicesPageTitle"></h2>
-                        <p class="lead mb-5" data-lang-key="servicesPageSubtitle"></p>
-                    </div>
-                </div>
-
                 <div class="row g-4">
                     <!-- Hizmet 1 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-box text-center">
-                            <div class="service-icon mb-3">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-box text-center h-100 p-4 bg-white rounded-4 shadow-sm border-0">
+                            <div class="service-icon mb-4 mx-auto bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 80px; height: 80px; font-size: 2rem;">
                                 <i class="bi bi-cpu-fill"></i>
                             </div>
-                            <h4 class="h5" data-lang-key="service1Title"></h4>
-                            <p data-lang-key="service1Text"></p>
+                            <h4 class="h5 fw-bold mb-3" data-lang-key="service1Title">PLC Programlama</h4>
+                            <p class="text-muted mb-0" data-lang-key="service1Text">Endüstriyel süreçlerinizi otomatize etmek için gelişmiş PLC yazılım çözümleri.</p>
                         </div>
                     </div>
                     <!-- Hizmet 2 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-box text-center">
-                            <div class="service-icon mb-3">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-box text-center h-100 p-4 bg-white rounded-4 shadow-sm border-0">
+                            <div class="service-icon mb-4 mx-auto bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 80px; height: 80px; font-size: 2rem;">
                                 <i class="bi bi-robot"></i>
                             </div>
-                            <h4 class="h5" data-lang-key="service2Title"></h4>
-                            <p data-lang-key="service2Text"></p>
+                            <h4 class="h5 fw-bold mb-3" data-lang-key="service2Title">Robotik Sistemler</h4>
+                            <p class="text-muted mb-0" data-lang-key="service2Text">Üretim hattınıza hız ve hassasiyet katan robotik entegrasyonlar.</p>
                         </div>
                     </div>
                     <!-- Hizmet 3 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-box text-center">
-                            <div class="service-icon mb-3">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-box text-center h-100 p-4 bg-white rounded-4 shadow-sm border-0">
+                            <div class="service-icon mb-4 mx-auto bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 80px; height: 80px; font-size: 2rem;">
                                 <i class="bi bi-display-fill"></i>
                             </div>
-                            <h4 class="h5" data-lang-key="service3Title"></h4>
-                            <p data-lang-key="service3Text"></p>
+                            <h4 class="h5 fw-bold mb-3" data-lang-key="service3Title">SCADA Sistemleri</h4>
+                            <p class="text-muted mb-0" data-lang-key="service3Text">Tesisinizin verilerini anlık izleyin ve kontrol edin.</p>
                         </div>
                     </div>
                     <!-- Hizmet 4 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-box text-center">
-                            <div class="service-icon mb-3">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-box text-center h-100 p-4 bg-white rounded-4 shadow-sm border-0">
+                            <div class="service-icon mb-4 mx-auto bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 80px; height: 80px; font-size: 2rem;">
                                 <i class="bi bi-gear-wide-connected"></i>
                             </div>
-                            <h4 class="h5" data-lang-key="service4Title"></h4>
-                            <p data-lang-key="service4Text"></p>
+                            <h4 class="h5 fw-bold mb-3" data-lang-key="service4Title">Makine Otomasyonu</h4>
+                            <p class="text-muted mb-0" data-lang-key="service4Text">Özel makine imalatı ve modernizasyonu için otomasyon desteği.</p>
                         </div>
                     </div>
                     <!-- Hizmet 5 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-box text-center">
-                            <div class="service-icon mb-3">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-box text-center h-100 p-4 bg-white rounded-4 shadow-sm border-0">
+                            <div class="service-icon mb-4 mx-auto bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 80px; height: 80px; font-size: 2rem;">
                                 <i class="bi bi-lightning-charge-fill"></i>
                             </div>
-                            <h4 class="h5" data-lang-key="service5Title"></h4>
-                            <p data-lang-key="service5Text"></p>
+                            <h4 class="h5 fw-bold mb-3" data-lang-key="service5Title">Enerji Verimliliği</h4>
+                            <p class="text-muted mb-0" data-lang-key="service5Text">Enerji tüketimini optimize eden akıllı sistemler.</p>
                         </div>
                     </div>
                     <!-- Hizmet 6 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-box text-center">
-                            <div class="service-icon mb-3">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service-box text-center h-100 p-4 bg-white rounded-4 shadow-sm border-0">
+                            <div class="service-icon mb-4 mx-auto bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 80px; height: 80px; font-size: 2rem;">
                                 <i class="bi bi-tools"></i>
                             </div>
-                            <h4 class="h5" data-lang-key="service6Title"></h4>
-                            <p data-lang-key="service6Text"></p>
+                            <h4 class="h5 fw-bold mb-3" data-lang-key="service6Title">Bakım ve Servis</h4>
+                            <p class="text-muted mb-0" data-lang-key="service6Text">Sistemlerinizin kesintisiz çalışması için periyodik bakım hizmetleri.</p>
                         </div>
                     </div>
                 </div>
@@ -96,9 +100,14 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Dil Dosyası -->
     <script src="languages.js"></script>
     <!-- Kendi Scriptimiz -->
     <script src="main.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
