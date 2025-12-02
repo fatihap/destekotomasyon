@@ -1,13 +1,47 @@
-/* Minimal Custom Styles - Relying on Bootstrap */
+/* Premium Industrial Design - Bootstrap Overrides */
 :root {
     --primary-color: #0d6efd;
-    /* Bootstrap Primary */
+    --primary-dark: #0a58ca;
+    --secondary-color: #6c757d;
+    --dark-bg: #212529;
+    --light-bg: #f8f9fa;
     --font-main: 'Inter', sans-serif;
     --font-heading: 'Oswald', sans-serif;
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
 }
 
 body {
     font-family: var(--font-main);
+    background-color: #f4f6f9;
+    /* Slightly darker than white for depth */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Glassmorphism Card Effect */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
 }
 
 /* Hover Effects */
@@ -37,4 +71,33 @@ body {
 /* Letter Spacing Utility */
 .letter-spacing-2 {
     letter-spacing: 2px;
+}
+
+/* Gradient Text */
+.text-gradient {
+    background: linear-gradient(45deg, var(--primary-color), #00d2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Custom Button Styling */
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+    border: none;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.6);
+    background: linear-gradient(45deg, var(--primary-dark), var(--primary-color));
+}
+
+/* Section Separator */
+.section-separator {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), transparent);
+    border-radius: 2px;
 }

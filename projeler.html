@@ -25,11 +25,15 @@
     <div id="navbar-placeholder"></div>
 
     <!-- Page Header -->
-    <header class="bg-dark text-white py-5 mt-5"
-        style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/3912981/pexels-photo-3912981.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover;">
-        <div class="container py-5 text-center">
-            <h1 class="display-3 fw-bold" style="font-family: 'Oswald', sans-serif;">Projelerimiz</h1>
-            <p class="lead opacity-75">Başarıyla tamamladığımız referans projelerimizden bazıları.</p>
+    <header class="position-relative py-5 mt-5 text-white overflow-hidden">
+        <div class="position-absolute top-0 start-0 w-100 h-100"
+            style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/3912981/pexels-photo-3912981.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover; z-index: -1;">
+        </div>
+        <div class="container py-5 text-center position-relative z-1">
+            <h1 class="display-3 fw-bold text-uppercase" style="font-family: 'Oswald', sans-serif;">Referans <span
+                    class="text-gradient">Projelerimiz</span></h1>
+            <p class="lead opacity-75 mx-auto" style="max-width: 700px;">Endüstrinin her alanında başarıyla
+                tamamladığımız, verimliliği ve kaliteyi artıran otomasyon çözümlerimiz.</p>
         </div>
     </header>
 
@@ -37,60 +41,129 @@
     <section class="py-5">
         <div class="container py-5">
             <div class="row g-4">
+                <!-- Project 1 -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 group-hover-effect">
+                    <div class="card glass-card border-0 rounded-4 overflow-hidden h-100 group-hover-effect">
                         <div class="position-relative overflow-hidden">
                             <img src="https://images.pexels.com/photos/3912981/pexels-photo-3912981.jpeg?auto=compress&cs=tinysrgb&w=800"
-                                alt="Project 1" class="img-fluid w-100 object-fit-cover"
-                                style="height: 300px; transition: transform 0.5s;">
+                                alt="Otomotiv Hattı" class="img-fluid w-100 object-fit-cover"
+                                style="height: 250px; transition: transform 0.5s;">
                             <div
                                 class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex flex-column justify-content-center align-items-center text-white opacity-0 transition-all hover-overlay">
-                                <h4 class="fw-bold" style="font-family: 'Oswald', sans-serif;">Otomotiv Hattı</h4>
-                                <p class="mb-0">Robotik Montaj Sistemi</p>
+                                <i class="bi bi-search fs-2 mb-2"></i>
+                                <span class="fw-bold text-uppercase">İncele</span>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Otomotiv Montaj Hattı</h5>
-                            <p class="card-text text-secondary small">Tam otomatik robotik montaj hattı kurulumu ve
-                                devreye alma.</p>
+                        <div class="card-body p-4">
+                            <span class="badge bg-primary bg-opacity-10 text-primary mb-2">Otomotiv</span>
+                            <h5 class="card-title fw-bold">Robotik Montaj Hattı</h5>
+                            <p class="card-text text-secondary small">Otomotiv parçalarının montajı için 6 eksenli robot
+                                entegrasyonu ve konveyör sistemi.</p>
                         </div>
                     </div>
                 </div>
+                <!-- Project 2 -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 group-hover-effect">
+                    <div class="card glass-card border-0 rounded-4 overflow-hidden h-100 group-hover-effect">
                         <div class="position-relative overflow-hidden">
                             <img src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=800"
-                                alt="Project 2" class="img-fluid w-100 object-fit-cover"
-                                style="height: 300px; transition: transform 0.5s;">
+                                alt="Gıda Fabrikası" class="img-fluid w-100 object-fit-cover"
+                                style="height: 250px; transition: transform 0.5s;">
                             <div
                                 class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex flex-column justify-content-center align-items-center text-white opacity-0 transition-all hover-overlay">
-                                <h4 class="fw-bold" style="font-family: 'Oswald', sans-serif;">Gıda Fabrikası</h4>
-                                <p class="mb-0">Paketleme Otomasyonu</p>
+                                <i class="bi bi-search fs-2 mb-2"></i>
+                                <span class="fw-bold text-uppercase">İncele</span>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Gıda Paketleme</h5>
-                            <p class="card-text text-secondary small">Yüksek hızlı paketleme ve etiketleme otomasyonu.
-                            </p>
+                        <div class="card-body p-4">
+                            <span class="badge bg-success bg-opacity-10 text-success mb-2">Gıda</span>
+                            <h5 class="card-title fw-bold">Paketleme Otomasyonu</h5>
+                            <p class="card-text text-secondary small">Dakikada 200 ürün kapasiteli, görüntü işlemeli
+                                kalite kontrol ve paketleme hattı.</p>
                         </div>
                     </div>
                 </div>
+                <!-- Project 3 -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 group-hover-effect">
+                    <div class="card glass-card border-0 rounded-4 overflow-hidden h-100 group-hover-effect">
                         <div class="position-relative overflow-hidden">
                             <img src="https://images.pexels.com/photos/159293/factory-machine-industry-plant-159293.jpeg?auto=compress&cs=tinysrgb&w=800"
-                                alt="Project 3" class="img-fluid w-100 object-fit-cover"
-                                style="height: 300px; transition: transform 0.5s;">
+                                alt="Enerji Santrali" class="img-fluid w-100 object-fit-cover"
+                                style="height: 250px; transition: transform 0.5s;">
                             <div
                                 class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex flex-column justify-content-center align-items-center text-white opacity-0 transition-all hover-overlay">
-                                <h4 class="fw-bold" style="font-family: 'Oswald', sans-serif;">Enerji Santrali</h4>
-                                <p class="mb-0">SCADA İzleme Sistemi</p>
+                                <i class="bi bi-search fs-2 mb-2"></i>
+                                <span class="fw-bold text-uppercase">İncele</span>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Enerji İzleme</h5>
-                            <p class="card-text text-secondary small">Merkezi SCADA sistemi ile enerji tüketim takibi.
-                            </p>
+                        <div class="card-body p-4">
+                            <span class="badge bg-warning bg-opacity-10 text-warning mb-2">Enerji</span>
+                            <h5 class="card-title fw-bold">SCADA İzleme Sistemi</h5>
+                            <p class="card-text text-secondary small">Enerji santrali verilerinin anlık izlenmesi,
+                                raporlanması ve uzaktan kontrolü.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card glass-card border-0 rounded-4 overflow-hidden h-100 group-hover-effect">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Depo Otomasyonu" class="img-fluid w-100 object-fit-cover"
+                                style="height: 250px; transition: transform 0.5s;">
+                            <div
+                                class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex flex-column justify-content-center align-items-center text-white opacity-0 transition-all hover-overlay">
+                                <i class="bi bi-search fs-2 mb-2"></i>
+                                <span class="fw-bold text-uppercase">İncele</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <span class="badge bg-info bg-opacity-10 text-info mb-2">Lojistik</span>
+                            <h5 class="card-title fw-bold">Akıllı Depo Sistemi</h5>
+                            <p class="card-text text-secondary small">AS/RS sistemleri ile tam otomatik depolama ve
+                                sevkiyat yönetimi.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card glass-card border-0 rounded-4 overflow-hidden h-100 group-hover-effect">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Su Arıtma" class="img-fluid w-100 object-fit-cover"
+                                style="height: 250px; transition: transform 0.5s;">
+                            <div
+                                class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex flex-column justify-content-center align-items-center text-white opacity-0 transition-all hover-overlay">
+                                <i class="bi bi-search fs-2 mb-2"></i>
+                                <span class="fw-bold text-uppercase">İncele</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <span class="badge bg-primary bg-opacity-10 text-primary mb-2">Altyapı</span>
+                            <h5 class="card-title fw-bold">Su Arıtma Tesisi</h5>
+                            <p class="card-text text-secondary small">Belediye su arıtma tesisi için PLC tabanlı
+                                otomasyon ve pompa kontrolü.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card glass-card border-0 rounded-4 overflow-hidden h-100 group-hover-effect">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Kimya Tesisi" class="img-fluid w-100 object-fit-cover"
+                                style="height: 250px; transition: transform 0.5s;">
+                            <div
+                                class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex flex-column justify-content-center align-items-center text-white opacity-0 transition-all hover-overlay">
+                                <i class="bi bi-search fs-2 mb-2"></i>
+                                <span class="fw-bold text-uppercase">İncele</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <span class="badge bg-danger bg-opacity-10 text-danger mb-2">Kimya</span>
+                            <h5 class="card-title fw-bold">Dozajlama Sistemi</h5>
+                            <p class="card-text text-secondary small">Hassas kimyasal dozajlama ve karıştırma prosesleri
+                                için ex-proof otomasyon.</p>
                         </div>
                     </div>
                 </div>
