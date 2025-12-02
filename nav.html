@@ -11,12 +11,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto align-items-center fw-medium text-uppercase small">
-                <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
-                <li class="nav-item"><a class="nav-link" href="hizmetler.html">Hizmetler</a></li>
-                <li class="nav-item"><a class="nav-link" href="projeler.html">Projeler</a></li>
-                <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-                <li class="nav-item ms-lg-3">
-                    <a href="iletisim.html" class="btn btn-primary rounded-pill px-4 fw-bold">Teklif Al</a>
+                <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="navHome">Ana Sayfa</a></li>
+                <li class="nav-item"><a class="nav-link" href="hizmetler.html" data-i18n="navServices">Hizmetler</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="projeler.html" data-i18n="navProjects">Projeler</a></li>
+                <li class="nav-item"><a class="nav-link" href="iletisim.html" data-i18n="navContact">İletişim</a></li>
+                <li class="nav-item dropdown ms-lg-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-globe me-1"></i> TR
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                        <li><a class="dropdown-item" href="#" onclick="setLanguage('tr'); return false;">🇹🇷 Türkçe</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#" onclick="setLanguage('en'); return false;">🇬🇧
+                                English</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item ms-lg-2">
+                    <a href="iletisim.html" class="btn btn-primary rounded-pill px-4 fw-bold"
+                        data-i18n="heroBtnQuote">Teklif Al</a>
                 </li>
             </ul>
         </div>

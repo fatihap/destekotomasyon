@@ -17,6 +17,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Languages -->
+    <script src="languages.js"></script>
 </head>
 
 <body class="bg-light d-flex flex-column min-vh-100">
@@ -30,18 +32,17 @@
         <div class="container position-relative z-2">
             <div class="row">
                 <div class="col-lg-8" data-aos="fade-up" data-aos-duration="1000">
-                    <span
-                        class="badge bg-primary bg-opacity-75 border border-primary-subtle mb-3 px-3 py-2 rounded-pill fs-6 fw-normal shadow-sm">Endüstriyel
-                        Otomasyon Lideri</span>
-                    <h1 class="display-1 fw-bold mb-4 lh-1" style="font-family: 'Oswald', sans-serif;">Geleceğin <span
-                            class="text-gradient">Otomasyon</span> Çözümleri</h1>
-                    <p class="lead text-light mb-5 w-75 opacity-90">Üretim hatlarınızı modern teknolojilerle optimize
-                        ediyor, verimliliği maksimize eden akıllı sistemler kuruyoruz.</p>
+                    <h1 class="display-1 fw-bold mb-4 lh-1" style="font-family: 'Oswald', sans-serif;"
+                        data-i18n="heroTitle">Geleceğin Teknolojisi, Bugünün Çözümleri</h1>
+                    <p class="lead text-light mb-5 w-75 opacity-90" data-i18n="heroSubtitle">Destek Otomasyon,
+                        endüstriyel otomasyon alanında yenilikçi ve güvenilir çözümler sunar.</p>
                     <div class="d-flex gap-3 flex-wrap">
-                        <a href="iletisim.html" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold shadow-lg">Bize
-                            Ulaşın <i class="bi bi-arrow-right ms-2"></i></a>
+                        <a href="iletisim.html" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold shadow-lg"
+                            data-i18n="heroBtnQuote">Hemen Teklif Alın
+                            <i class="bi bi-arrow-right ms-2"></i></a>
                         <a href="hizmetler.html"
-                            class="btn btn-outline-light btn-lg rounded-pill px-5 fw-bold backdrop-blur">Hizmetlerimiz</a>
+                            class="btn btn-outline-light btn-lg rounded-pill px-5 fw-bold backdrop-blur"
+                            data-i18n="heroBtnServices">Hizmetlerimiz</a>
                     </div>
                 </div>
             </div>
@@ -60,21 +61,22 @@
                             style="min-width: 160px;">
                             <span class="d-block display-4 fw-bold lh-1 text-primary"
                                 style="font-family: 'Oswald', sans-serif;">15+</span>
-                            <span class="small text-uppercase fw-bold text-dark">Yıllık<br>Tecrübe</span>
+                            <span class="small text-uppercase fw-bold text-dark"
+                                data-i18n="statsExperience">Yıllık<br>Tecrübe</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <h6 class="text-primary fw-bold text-uppercase letter-spacing-2">Hakkımızda</h6>
-                    <h2 class="display-5 fw-bold mb-4" style="font-family: 'Oswald', sans-serif;">Endüstriyel Çözüm
-                        Ortağınız</h2>
+                    <h6 class="text-primary fw-bold text-uppercase letter-spacing-2" data-i18n="aboutTitle">Hakkımızda
+                    </h6>
+                    <h2 class="display-5 fw-bold mb-4" style="font-family: 'Oswald', sans-serif;"
+                        data-i18n="whyUsTitle">Endüstriyel Çözüm Ortağınız</h2>
                     <div class="section-separator mb-4"></div>
-                    <p class="lead text-secondary mb-4">Destek Otomasyon, teknolojiyi üretim süreçlerine entegre ederek
-                        işletmelerin rekabet gücünü artıran yenilikçi bir mühendislik firmasıdır.</p>
-                    <p class="text-secondary mb-4">Müşteri odaklı yaklaşımımız ve uzman kadromuzla, projenizin her
-                        aşamasında yanınızdayız.</p>
-                    <a href="hizmetler.html" class="btn btn-dark rounded-pill px-5 py-3 fw-bold shadow">Daha Fazla
-                        Bilgi</a>
+                    <p class="lead text-secondary mb-4" data-i18n="aboutText">Destek Otomasyon, sektördeki derin
+                        tecrübesi ve uzman kadrosuyla, müşterilerinin verimliliğini artıran, maliyetlerini düşüren ve
+                        üretim süreçlerini optimize eden anahtar teslim otomasyon projeleri geliştirmektedir.</p>
+                    <a href="hizmetler.html" class="btn btn-dark rounded-pill px-5 py-3 fw-bold shadow"
+                        data-i18n="aboutBtnMore">Daha Fazla Bilgi</a>
                 </div>
             </div>
         </div>
@@ -89,13 +91,13 @@
                 <div class="col-md-3 col-6">
                     <div class="p-3">
                         <h2 class="display-4 fw-bold mb-0 counter" style="font-family: 'Oswald', sans-serif;">150+</h2>
-                        <p class="text-white-50 mb-0 fw-medium">Tamamlanan Proje</p>
+                        <p class="text-white-50 mb-0 fw-medium" data-i18n="statsProject">Tamamlanan Proje</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
                     <div class="p-3">
                         <h2 class="display-4 fw-bold mb-0 counter" style="font-family: 'Oswald', sans-serif;">80+</h2>
-                        <p class="text-white-50 mb-0 fw-medium">Mutlu Müşteri</p>
+                        <p class="text-white-50 mb-0 fw-medium" data-i18n="statsCustomer">Mutlu Müşteri</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
@@ -107,7 +109,7 @@
                 <div class="col-md-3 col-6">
                     <div class="p-3">
                         <h2 class="display-4 fw-bold mb-0 counter" style="font-family: 'Oswald', sans-serif;">15</h2>
-                        <p class="text-white-50 mb-0 fw-medium">Yıllık Deneyim</p>
+                        <p class="text-white-50 mb-0 fw-medium" data-i18n="statsExperience">Yıllık Deneyim</p>
                     </div>
                 </div>
             </div>
@@ -121,13 +123,13 @@
                 data-aos="zoom-in"
                 style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover;">
                 <div class="position-relative z-2">
-                    <h2 class="display-5 fw-bold mb-4" style="font-family: 'Oswald', sans-serif;">Projeniz için hazır
-                        mısınız?</h2>
-                    <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 600px;">Uzman ekibimizle iletişime
-                        geçin, işletmeniz için en uygun otomasyon çözümünü birlikte planlayalım.</p>
+                    <h2 class="display-5 fw-bold mb-4" style="font-family: 'Oswald', sans-serif;" data-i18n="ctaTitle">
+                        Projenizi Hayata Geçirmeye Hazır mısınız?</h2>
+                    <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 600px;" data-i18n="ctaSubtitle">
+                        Fikrinizi, projenizi veya ihtiyacınızı bizimle paylaşın, size özel çözümler üretelim.</p>
                     <div class="d-flex justify-content-center gap-3 flex-wrap">
-                        <a href="iletisim.html"
-                            class="btn btn-primary btn-lg rounded-pill px-5 fw-bold shadow">İletişime Geçin</a>
+                        <a href="iletisim.html" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold shadow"
+                            data-i18n="ctaButton">Hemen İletişime Geçin</a>
                     </div>
                 </div>
             </div>
