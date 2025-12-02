@@ -1,183 +1,139 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destek Otomasyon - Endüstriyel Otomasyon Çözümleri</title>
+    <title>Destek Otomasyon | Endüstriyel Çözümler</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/logo.png">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Kendi Özel Stilleriniz -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- AOS Animation Library (Opsiyonel ama etkileyici) -->
+    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
     <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero d-flex align-items-center text-center text-white">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10" data-aos="fade-up">
-                        <h1 class="display-3 fw-bold mb-4" data-lang-key="heroTitle">Endüstriyel Geleceği Birlikte İnşa Edelim</h1>
-                        <p class="lead mb-5 mx-auto" style="max-width: 700px;" data-lang-key="heroSubtitle">Otomasyon çözümlerimizle üretim hattınızı optimize edin, verimliliği artırın ve maliyetleri düşürün.</p>
-                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                            <a href="iletisim.html" class="btn btn-primary btn-lg px-5 gap-3 rounded-pill" data-lang-key="heroBtnQuote">Hemen Teklif Alın</a>
-                            <a href="hizmetler.html" class="btn btn-outline-light btn-lg px-5 rounded-pill" data-lang-key="heroBtnServices">Hizmetlerimiz</a>
-                        </div>
+    <!-- Hero Section -->
+    <header id="home" class="min-vh-100 d-flex align-items-center position-relative text-white"
+        style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/4386339/pexels-photo-4386339.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat; margin-top: -76px; padding-top: 76px;">
+        <div class="container position-relative z-2">
+            <div class="row">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-duration="1000">
+                    <span
+                        class="badge bg-primary bg-opacity-75 border border-primary-subtle mb-3 px-3 py-2 rounded-pill fs-6 fw-normal">Endüstriyel
+                        Otomasyon Lideri</span>
+                    <h1 class="display-1 fw-bold mb-4 lh-1" style="font-family: 'Oswald', sans-serif;">Geleceğin <span
+                            class="text-primary">Otomasyon</span> Çözümleri</h1>
+                    <p class="lead text-light mb-5 w-75 opacity-75">Üretim hatlarınızı modern teknolojilerle optimize
+                        ediyor, verimliliği maksimize eden akıllı sistemler kuruyoruz.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="iletisim.html" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold shadow">Bize
+                            Ulaşın <i class="bi bi-arrow-right ms-2"></i></a>
+                        <a href="hizmetler.html"
+                            class="btn btn-outline-light btn-lg rounded-pill px-5 fw-bold">Hizmetlerimiz</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </header>
 
-        <!-- Hakkımızda Bölümü -->
-        <section id="about" class="section">
-            <div class="container">
-                <div class="row align-items-center gy-5">
-                    <div class="col-lg-6 order-lg-2" data-aos="fade-left">
-                        <div class="position-relative">
-                            <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid rounded-4 shadow-lg" alt="Hakkımızda">
-                            <div class="position-absolute bottom-0 start-0 bg-primary text-white p-4 rounded-end-4 shadow mb-4" style="max-width: 200px;">
-                                <h3 class="fw-bold mb-0">15+</h3>
-                                <small>Yıllık Tecrübe</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1" data-aos="fade-right">
-                        <h2 class="section-title mb-4" data-lang-key="aboutTitle">Hakkımızda</h2>
-                        <p class="lead text-muted mb-4" data-lang-key="aboutText">Destek Otomasyon olarak, endüstriyel otomasyon alanında yenilikçi ve sürdürülebilir çözümler sunuyoruz.</p>
-                        <p class="mb-4">Müşterilerimizin ihtiyaçlarına özel olarak tasarladığımız sistemler ile üretim süreçlerinde maksimum verimlilik sağlıyoruz. Uzman mühendis kadromuz ve güçlü teknik altyapımız ile her zaman yanınızdayız.</p>
-                        
-                        <div class="row g-4 mb-4">
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <i class="bi bi-check-circle-fill text-primary fs-4 me-3"></i>
-                                    <span class="fw-bold" data-lang-key="aboutFeature1">Profesyonel Ekip</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <i class="bi bi-check-circle-fill text-primary fs-4 me-3"></i>
-                                    <span class="fw-bold" data-lang-key="aboutFeature2">7/24 Destek</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <i class="bi bi-check-circle-fill text-primary fs-4 me-3"></i>
-                                    <span class="fw-bold" data-lang-key="aboutFeature3">Garantili Çözümler</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <i class="bi bi-check-circle-fill text-primary fs-4 me-3"></i>
-                                    <span class="fw-bold" data-lang-key="aboutFeature4">Yüksek Teknoloji</span>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="hizmetler.html" class="btn btn-outline-primary rounded-pill px-4"><span data-lang-key="aboutBtnMore">Daha Fazla Bilgi</span> <i class="bi bi-arrow-right ms-2"></i></a>
-                    </div>
+    <!-- About Teaser -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="About Us" class="img-fluid rounded-4 shadow-lg">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h6 class="text-primary fw-bold text-uppercase letter-spacing-2">Hakkımızda</h6>
+                    <h2 class="display-5 fw-bold mb-4" style="font-family: 'Oswald', sans-serif;">Endüstriyel Çözüm
+                        Ortağınız</h2>
+                    <p class="lead text-secondary mb-4">Destek Otomasyon, teknolojiyi üretim süreçlerine entegre ederek
+                        işletmelerin rekabet gücünü artıran yenilikçi bir mühendislik firmasıdır.</p>
+                    <a href="hizmetler.html" class="btn btn-dark rounded-pill px-5 py-3 fw-bold">Daha Fazla Bilgi</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Neden Biz Bölümü -->
-        <section id="why-us" class="section bg-light">
-            <div class="container">
-                <div class="text-center mb-5" data-aos="fade-up">
-                    <h2 class="section-title" data-lang-key="whyUsTitle">Neden Biz?</h2>
-                    <p class="lead text-muted mx-auto" style="max-width: 600px;" data-lang-key="whyUsSubtitle">Sektördeki tecrübemiz ve kalite anlayışımızla fark yaratıyoruz.</p>
+    <!-- Stats Section -->
+    <section class="py-5 bg-primary text-white position-relative overflow-hidden stats-section">
+        <div class="container position-relative z-2 py-4">
+            <div class="row text-center gy-5">
+                <div class="col-md-3 col-6">
+                    <div class="p-3">
+                        <h2 class="display-4 fw-bold mb-0 counter" style="font-family: 'Oswald', sans-serif;">150+</h2>
+                        <p class="text-white-50 mb-0 fw-medium">Tamamlanan Proje</p>
+                    </div>
                 </div>
-                
-                <div class="row g-4">
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="feature-card text-center h-100 p-4 bg-white rounded-4 shadow-sm">
-                            <div class="feature-icon">
-                                <i class="bi bi-award-fill"></i>
-                            </div>
-                            <h4 class="h5 fw-bold mb-3" data-lang-key="whyUsCard1Title">Kalite Garantisi</h4>
-                            <p class="text-muted mb-0" data-lang-key="whyUsCard1Text">Uluslararası standartlarda hizmet ve ürün kalitesi sunuyoruz.</p>
-                        </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-3">
+                        <h2 class="display-4 fw-bold mb-0 counter" style="font-family: 'Oswald', sans-serif;">80+</h2>
+                        <p class="text-white-50 mb-0 fw-medium">Mutlu Müşteri</p>
                     </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="feature-card text-center h-100 p-4 bg-white rounded-4 shadow-sm">
-                            <div class="feature-icon">
-                                <i class="bi bi-check-circle-fill"></i>
-                            </div>
-                            <h4 class="h5 fw-bold mb-3" data-lang-key="whyUsCard2Title">Zamanında Teslim</h4>
-                            <p class="text-muted mb-0" data-lang-key="whyUsCard2Text">Projelerinizi söz verdiğimiz zamanda eksiksiz teslim ediyoruz.</p>
-                        </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-3">
+                        <h2 class="display-4 fw-bold mb-0 counter" style="font-family: 'Oswald', sans-serif;">25+</h2>
+                        <p class="text-white-50 mb-0 fw-medium">Uzman Personel</p>
                     </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="feature-card text-center h-100 p-4 bg-white rounded-4 shadow-sm">
-                            <div class="feature-icon">
-                                <i class="bi bi-headset"></i>
-                            </div>
-                            <h4 class="h5 fw-bold mb-3" data-lang-key="whyUsCard3Title">7/24 Destek</h4>
-                            <p class="text-muted mb-0" data-lang-key="whyUsCard3Text">Satış sonrası teknik destek ekibimizle her zaman yanınızdayız.</p>
-                        </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-3">
+                        <h2 class="display-4 fw-bold mb-0 counter" style="font-family: 'Oswald', sans-serif;">15</h2>
+                        <p class="text-white-50 mb-0 fw-medium">Yıllık Deneyim</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Rakamlarla Biz Bölümü -->
-        <section class="section stats-section text-white">
-            <div class="container">
-                <div class="row text-center gy-4">
-                    <div class="col-md-4 stat-item" data-aos="zoom-in" data-aos-delay="100">
-                        <i class="bi bi-journal-check mb-3 d-block"></i>
-                        <p class="counter display-4 fw-bold mb-0">150+</p>
-                        <p class="mt-2 text-white-50 fw-bold text-uppercase" data-lang-key="statsProject">Tamamlanan Proje</p>
-                    </div>
-                    <div class="col-md-4 stat-item" data-aos="zoom-in" data-aos-delay="200">
-                        <i class="bi bi-people-fill mb-3 d-block"></i>
-                        <p class="counter display-4 fw-bold mb-0">80+</p>
-                        <p class="mt-2 text-white-50 fw-bold text-uppercase" data-lang-key="statsCustomer">Mutlu Müşteri</p>
-                    </div>
-                    <div class="col-md-4 stat-item" data-aos="zoom-in" data-aos-delay="300">
-                        <i class="bi bi-clock-history mb-3 d-block"></i>
-                        <p class="counter display-4 fw-bold mb-0">15+</p>
-                        <p class="mt-2 text-white-50 fw-bold text-uppercase" data-lang-key="statsExperience">Yıllık Tecrübe</p>
+    <!-- CTA Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="bg-dark text-white rounded-5 p-5 text-center position-relative overflow-hidden"
+                data-aos="zoom-in"
+                style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover;">
+                <div class="position-relative z-2">
+                    <h2 class="display-5 fw-bold mb-4" style="font-family: 'Oswald', sans-serif;">Projeniz için hazır
+                        mısınız?</h2>
+                    <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 600px;">Uzman ekibimizle iletişime
+                        geçin, işletmeniz için en uygun otomasyon çözümünü birlikte planlayalım.</p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="iletisim.html" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold">İletişime
+                            Geçin</a>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Harekete Geç Bölümü -->
-        <section class="section cta-section text-center position-relative">
-            <div class="container position-relative z-1">
-                <h2 class="display-5 fw-bold mb-4 text-white" data-lang-key="ctaTitle">Projelerinizi Hayata Geçirelim</h2>
-                <p class="lead mb-5 text-white-50 mx-auto" style="max-width: 700px;" data-lang-key="ctaSubtitle">İhtiyaçlarınıza özel otomasyon çözümleri için bizimle iletişime geçin.</p>
-                <a href="iletisim.html" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-bold shadow-lg" data-lang-key="ctaButton">Hemen İletişime Geçin</a>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
-    <!-- Bootstrap JS -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Dil Dosyası -->
-    <script src="languages.js"></script>
-    <!-- Kendi Scriptimiz -->
     <script src="main.js"></script>
     <script>
-        // AOS Init
-        document.addEventListener('DOMContentLoaded', function() {
-            AOS.init({
-                duration: 800,
-                once: true
-            });
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800
         });
     </script>
 </body>
+
 </html>

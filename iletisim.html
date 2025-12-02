@@ -1,134 +1,136 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim - Destek Otomasyon</title>
+    <title>İletişim | Destek Otomasyon</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Kendi Özel Stilleriniz -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- AOS -->
+    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
     <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
 
-    <main>
-        <!-- Page Header -->
-        <section class="bg-dark py-5 text-white position-relative overflow-hidden">
-            <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25" style="background: url('https://images.pexels.com/photos/8927041/pexels-photo-8927041.jpeg') center/cover;"></div>
-            <div class="container position-relative z-1 text-center py-5">
-                <h1 class="display-4 fw-bold" data-lang-key="contactPageTitle">İletişim</h1>
-                <p class="lead mb-0 opacity-75" data-lang-key="contactPageSubtitle">Bizimle iletişime geçmekten çekinmeyin</p>
-            </div>
-        </section>
+    <!-- Page Header -->
+    <header class="bg-primary text-white py-5 mt-5">
+        <div class="container py-5 text-center">
+            <h1 class="display-3 fw-bold" style="font-family: 'Oswald', sans-serif;">İletişim</h1>
+            <p class="lead opacity-75">Projeleriniz için bizimle iletişime geçin.</p>
+        </div>
+    </header>
 
-        <section class="section bg-light">
-            <div class="container">
-                <div class="row g-5">
-                    <!-- İletişim Formu -->
-                    <div class="col-lg-7" data-aos="fade-right">
-                        <div class="card border-0 shadow-sm rounded-4 h-100 p-4 p-md-5">
-                            <h3 class="mb-4 fw-bold text-primary" data-lang-key="contactFormTitle">Bize Mesaj Gönderin</h3>
-                            <form action="#" method="POST" class="needs-validation" novalidate> 
+    <!-- Contact Content -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <h2 class="fw-bold mb-4" style="font-family: 'Oswald', sans-serif;">İletişim Bilgileri</h2>
+                    <p class="text-secondary mb-5">Aşağıdaki iletişim kanallarından bize ulaşabilir veya formu
+                        doldurarak size dönüş yapmamızı sağlayabilirsiniz.</p>
+
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 btn btn-primary rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 50px; height: 50px;">
+                            <i class="bi bi-geo-alt-fill fs-4"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold mb-1">Adres</h5>
+                            <p class="text-secondary mb-0">İkitelli OSB, Metal İş Sanayi Sitesi, İstanbul</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 btn btn-primary rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 50px; height: 50px;">
+                            <i class="bi bi-telephone-fill fs-4"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold mb-1">Telefon</h5>
+                            <p class="text-secondary mb-0">+90 212 000 00 00</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 btn btn-primary rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 50px; height: 50px;">
+                            <i class="bi bi-envelope-fill fs-4"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold mb-1">E-posta</h5>
+                            <p class="text-secondary mb-0">info@destekotomasyon.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="card border-0 shadow-sm p-4 rounded-4">
+                        <div class="card-body">
+                            <h3 class="fw-bold mb-4" style="font-family: 'Oswald', sans-serif;">İletişim Formu</h3>
+                            <form>
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="adSoyad" name="adSoyad" placeholder="Adınız Soyadınız" data-lang-placeholder="contactFormName" required>
-                                            <label for="adSoyad" data-lang-key="contactFormName">Ad Soyad</label>
-                                        </div>
+                                        <label for="name" class="form-label">Adınız Soyadınız</label>
+                                        <input type="text" class="form-control" id="name" required>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" data-lang-placeholder="contactFormEmail" required>
-                                            <label for="email" data-lang-key="contactFormEmail">E-posta Adresi</label>
-                                        </div>
+                                        <label for="email" class="form-label">E-posta Adresiniz</label>
+                                        <input type="email" class="form-control" id="email" required>
                                     </div>
                                     <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="konu" name="konu" placeholder="Konu" data-lang-placeholder="contactFormSubject">
-                                            <label for="konu" data-lang-key="contactFormSubject">Konu</label>
-                                        </div>
+                                        <label for="subject" class="form-label">Konu</label>
+                                        <input type="text" class="form-control" id="subject" required>
                                     </div>
                                     <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" id="mesaj" name="mesaj" placeholder="Mesajınız" data-lang-placeholder="contactFormMessage" style="height: 150px" required></textarea>
-                                            <label for="mesaj" data-lang-key="contactFormMessage">Mesajınız</label>
-                                        </div>
+                                        <label for="message" class="form-label">Mesajınız</label>
+                                        <textarea class="form-control" id="message" rows="5" required></textarea>
                                     </div>
-                                    <div class="col-12 mt-4">
-                                        <button type="submit" class="btn btn-primary btn-lg px-5 rounded-pill w-100 w-md-auto" data-lang-key="contactFormButton">Gönder</button>
+                                    <div class="col-12">
+                                        <button type="submit"
+                                            class="btn btn-primary rounded-pill px-5 fw-bold">Gönder</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
-
-                    <!-- İletişim Bilgileri -->
-                    <div class="col-lg-5" data-aos="fade-left">
-                        <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden">
-                            <div class="card-body p-4 p-md-5">
-                                <h3 class="mb-4 fw-bold text-primary" data-lang-key="contactInfoTitle">İletişim Bilgileri</h3>
-                                
-                                <div class="d-flex align-items-start mb-4">
-                                    <div class="flex-shrink-0 bg-primary bg-opacity-10 p-3 rounded-circle text-primary">
-                                        <i class="bi bi-geo-alt-fill fs-4"></i>
-                                    </div>
-                                    <div class="ms-3">
-                                        <h5 class="fw-bold mb-1" data-lang-key="contactAddressTitle">Adres</h5>
-                                        <p class="text-muted mb-0" data-lang-key="contactInfoAddress">Gebze, Kocaeli, Türkiye</p>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex align-items-start mb-4">
-                                    <div class="flex-shrink-0 bg-primary bg-opacity-10 p-3 rounded-circle text-primary">
-                                        <i class="bi bi-telephone-fill fs-4"></i>
-                                    </div>
-                                    <div class="ms-3">
-                                        <h5 class="fw-bold mb-1" data-lang-key="contactPhoneTitle">Telefon</h5>
-                                        <p class="text-muted mb-0" data-lang-key="phone">+90 539 957 13 33</p>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex align-items-start mb-4">
-                                    <div class="flex-shrink-0 bg-primary bg-opacity-10 p-3 rounded-circle text-primary">
-                                        <i class="bi bi-envelope-fill fs-4"></i>
-                                    </div>
-                                    <div class="ms-3">
-                                        <h5 class="fw-bold mb-1" data-lang-key="contactEmailTitle">E-posta</h5>
-                                        <p class="text-muted mb-0">info@destekotomasyon.com.tr</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Harita -->
-                            <div class="h-100 min-vh-25">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48337.71299539792!2d29.351016648632808!3d40.821090800000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadf58b335b99b%3A0x1d468813d4d4508a!2sGebze%2C%20Kocaeli!5e0!3m2!1str!2str!4v1678886543211!5m2!1str!2str" width="100%" height="100%" style="border:0; min-height: 300px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </section>
-    </main>
-    
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="bg-light">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.9633698339308!2d28.7979!3d41.0679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDA0JzA0LjQiTiAyOMKwNDcnNTIuNCJF!5e0!3m2!1str!2str!4v1635780000000!5m2!1str!2str"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
-    <!-- Bootstrap JS -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Dil Dosyası -->
-    <script src="languages.js"></script>
-    <!-- Kendi Scriptimiz -->
     <script src="main.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800
+        });
     </script>
 </body>
+
 </html>

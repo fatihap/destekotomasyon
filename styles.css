@@ -1,210 +1,40 @@
-/* Modern ve Bootstrap Uyumlu Stiller */
+/* Minimal Custom Styles - Relying on Bootstrap */
 :root {
-    --bs-primary-rgb: 13, 110, 253;
-    --bs-secondary-rgb: 108, 117, 125;
     --primary-color: #0d6efd;
-    --secondary-color: #0a58ca;
-    --dark-color: #212529;
-    --light-color: #f8f9fa;
-    --white-color: #ffffff;
-    --font-main: 'Segoe UI', Roboto, "Helvetica Neue", Arial, sans-serif;
-    --card-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    --card-hover-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    /* Bootstrap Primary */
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Oswald', sans-serif;
 }
 
 body {
     font-family: var(--font-main);
-    padding-top: 76px; /* Navbar yüksekliğine göre ayarlandı */
-    color: var(--dark-color);
-    background-color: #fdfdfd;
 }
 
-/* Navbar Özelleştirmeleri */
-.navbar {
-    background-color: rgba(33, 37, 41, 0.95) !important; /* Hafif saydam */
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease-in-out;
-}
-
-.nav-link {
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.nav-link:hover, .nav-link.active {
-    color: var(--primary-color) !important;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(13, 110, 253, 0.6) 100%), url('https://images.pexels.com/photos/4386339/pexels-photo-4386339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Parallax etkisi */
-    height: 80vh;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    position: relative;
-}
-
-.hero h1 {
-    font-weight: 800;
-    letter-spacing: -1px;
-    margin-bottom: 1.5rem;
-}
-
-.hero p {
-    font-size: 1.25rem;
-    opacity: 0.9;
-}
-
-/* Section Genel */
-.section {
-    padding: 5rem 0;
-}
-
-.section-title {
-    font-weight: 700;
-    color: var(--dark-color);
-    margin-bottom: 0.5rem;
-    position: relative;
-    display: inline-block;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: var(--primary-color);
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
-/* Kart Tasarımları (Hizmetler & Neden Biz) */
-.feature-card, .service-box {
-    background: white;
-    border-radius: 10px;
-    padding: 2rem;
-    height: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(0,0,0,0.05);
-}
-
-.feature-card:hover, .service-box:hover {
+/* Hover Effects */
+.hover-shadow:hover {
     transform: translateY(-5px);
-    box-shadow: var(--card-hover-shadow);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
 
-.service-icon, .feature-icon {
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-    background: rgba(13, 110, 253, 0.1);
-    border-radius: 50%;
-    color: var(--primary-color);
-    font-size: 2.5rem;
-    margin: 0 auto 1.5rem;
-    transition: background 0.3s ease, color 0.3s ease;
+.transition-all {
+    transition: all 0.3s ease;
 }
 
-.feature-card:hover .feature-icon, 
-.service-box:hover .service-icon {
-    background: var(--primary-color);
-    color: white;
+.group-hover-effect:hover img {
+    transform: scale(1.1) !important;
 }
 
-/* Proje Kartları */
-.project-card {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: var(--card-shadow);
-    cursor: pointer;
+.group-hover-effect:hover .hover-overlay {
+    opacity: 1 !important;
 }
 
-.project-img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+.hover-white:hover {
+    color: white !important;
+    padding-left: 5px;
+    transition: all 0.2s ease;
 }
 
-.project-card:hover .project-img {
-    transform: scale(1.1);
-}
-
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(33, 37, 41, 0.85);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    padding: 2rem;
-    text-align: center;
-    color: white;
-}
-
-.project-card:hover .project-overlay {
-    opacity: 1;
-}
-
-/* İstatistikler */
-.stats-section {
-    background: linear-gradient(45deg, #0d6efd, #0a58ca);
-    color: white;
-    padding: 4rem 0;
-}
-
-.stat-item i {
-    font-size: 3.5rem;
-    opacity: 0.8;
-}
-
-.stat-item .counter {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1;
-    margin: 10px 0;
-}
-
-/* CTA Section */
-.cta-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 6rem 0;
-}
-
-/* Footer */
-footer {
-    background-color: #212529;
-    color: #adb5bd;
-}
-
-footer a {
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-footer a:hover {
-    color: var(--white-color) !important;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .hero { height: auto; padding: 6rem 0; }
+/* Letter Spacing Utility */
+.letter-spacing-2 {
+    letter-spacing: 2px;
 }

@@ -1,92 +1,70 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+
+    // HTML Yükleme Fonksiyonu (Nav ve Footer için)
     const loadHTML = (id, url) => {
         return fetch(url)
             .then(response => response.text())
             .then(data => {
                 document.getElementById(id).innerHTML = data;
-            });
+
+                // Nav yüklendikten sonra aktif linki belirle
+                if (id === 'navbar-placeholder') {
+                    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+                    // Tüm nav linklerini seç
+                    const navLinks = document.querySelectorAll('.nav-link');
+
+                    navLinks.forEach(link => {
+                        // Linkin href değerini al
+                        const href = link.getAttribute('href');
+
+                        // Eğer href, mevcut sayfa ismini içeriyorsa veya anasayfa ise
+                        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                            link.classList.add('active');
+                            link.setAttribute('aria-current', 'page');
+                        } else {
+                            link.classList.remove('active');
+                            link.removeAttribute('aria-current');
+                        }
+                    });
+                }
+            })
+            .catch(err => console.error('Yükleme hatası:', err));
     };
 
-    const setLanguage = (lang) => {
-        localStorage.setItem('language', lang);
-        location.reload();
-    };
-
-    const translatePage = () => {
-        const lang = localStorage.getItem('language') || 'tr'; // Varsayılan dil Türkçe
-        const translation = translations[lang];
-
-        // İçerik çevirisi
-        document.querySelectorAll('[data-lang-key]').forEach(element => {
-            const key = element.getAttribute('data-lang-key');
-            if (translation[key]) {
-                element.innerHTML = translation[key];
-            }
-        });
-
-        // Placeholder çevirisi
-        document.querySelectorAll('[data-lang-placeholder]').forEach(element => {
-            const key = element.getAttribute('data-lang-placeholder');
-            if (translation[key]) {
-                element.setAttribute('placeholder', translation[key]);
-            }
-        });
-
-        document.documentElement.lang = lang; // html etiketinin lang özelliğini güncelle
-
-        // Aktif dil linkini işaretle
-        document.querySelectorAll('.lang-switcher a').forEach(a => {
-            a.classList.remove('active-lang');
-        });
-        const activeLangLink = document.querySelector(`.lang-switcher a[onclick="setLanguage('${lang}')"]`);
-        if(activeLangLink) activeLangLink.classList.add('active-lang');
-    };
-
-    // Navbar ve Footer'ı yükle, sonra çeviriyi yap
+    // Navbar ve Footer'ı yükle
     Promise.all([
         loadHTML("navbar-placeholder", "nav.html"),
         loadHTML("footer-placeholder", "footer.html")
     ]).then(() => {
-        translatePage();
-
-        // Aktif sayfa linkini işaretle
-        const currentPage = window.location.pathname.split("/").pop() || "index.html";
-        const activeLink = document.querySelector(`.nav-link[href="${currentPage}"]`);
-        if (activeLink) {
-            activeLink.classList.add('active');
-            activeLink.setAttribute('aria-current', 'page');
-        }
-
-        // Dil değiştirme butonlarına event listener ekle
-        window.setLanguage = setLanguage; // Fonksiyonu global scope'a taşı
-
-        // Sayaç Animasyonu (Sadece anasayfada çalışacak)
-        if (document.querySelector('.stats-section')) {
-            const counters = document.querySelectorAll('.counter');
-            const speed = 200; // Animasyon hızı
-
-            const animateCounter = (counter) => {
-                const target = +counter.innerText.replace('+', '');
-                counter.innerText = '0';
-
-                const updateCount = () => {
-                    const count = +counter.innerText;
-                    const increment = target / speed;
-
-                    if (count < target) {
-                        counter.innerText = `${Math.ceil(count + increment)}`;
-                        setTimeout(updateCount, 10);
-                    } else {
-                        counter.innerText = `${target}+`;
-                    }
-                };
-                updateCount();
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                if (entries[0].isIntersecting) counters.forEach(animateCounter);
-            }, { threshold: 0.5 });
-            observer.observe(document.querySelector('.stats-section'));
-        }
+        // Yükleme tamamlandıktan sonra yapılacak işlemler (varsa)
     });
+
+    // Sayaç Animasyonu (Sadece stats-section varsa çalışır)
+    if (document.querySelector('.stats-section')) {
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // Animasyon hızı
+
+        const animateCounter = (counter) => {
+            const target = +counter.innerText.replace('+', '');
+            counter.innerText = '0';
+
+            const updateCount = () => {
+                const count = +counter.innerText;
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = `${Math.ceil(count + increment)}`;
+                    setTimeout(updateCount, 10);
+                } else {
+                    counter.innerText = `${target}+`;
+                }
+            };
+            updateCount();
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) counters.forEach(animateCounter);
+        }, { threshold: 0.5 });
+        observer.observe(document.querySelector('.stats-section'));
+    }
 });
